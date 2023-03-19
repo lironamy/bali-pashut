@@ -1,0 +1,485 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        19.084253311157227,
+        24.288461685180664,
+        19.07085418701172
+      ],
+      "min": [
+        -19.251848220825195,
+        -0.17859935760498047,
+        -19.265247344970703
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 786384,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9999956488609314,
+        1.0,
+        0.9999967813491821
+      ],
+      "min": [
+        -0.999996542930603,
+        -1.0,
+        -0.9999963045120239
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9999984502792358,
+        0.9999865889549255,
+        0.9999964833259583,
+        1.0
+      ],
+      "min": [
+        -0.9999740719795227,
+        -0.9999988079071045,
+        -0.9999850988388062,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9928838610649109,
+        0.9902328252792358
+      ],
+      "min": [
+        0.003879400435835123,
+        0.007611521054059267
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 524256,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9928838610649109,
+        0.9902328252792358
+      ],
+      "min": [
+        0.003879400435835123,
+        0.007611521054059267
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1048512,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9928838610649109,
+        0.9902328252792358
+      ],
+      "min": [
+        0.003879400435835123,
+        0.007611521054059267
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1572768,
+      "componentType": 5126,
+      "count": 65532,
+      "max": [
+        0.9928838610649109,
+        0.9902328252792358
+      ],
+      "min": [
+        0.003879400435835123,
+        0.007611521054059267
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 348567,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1572768,
+      "componentType": 5126,
+      "count": 27437,
+      "max": [
+        15.40060043334961,
+        17.673931121826172,
+        15.734846115112305
+      ],
+      "min": [
+        -16.13701057434082,
+        0.007216453552246094,
+        -16.00295066833496
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 1902012,
+      "componentType": 5126,
+      "count": 27437,
+      "max": [
+        0.9999984502792358,
+        0.9999664425849915,
+        0.9998090863227844
+      ],
+      "min": [
+        -0.9999449849128723,
+        -0.998508870601654,
+        -0.9999397993087769
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 1048512,
+      "componentType": 5126,
+      "count": 27437,
+      "max": [
+        0.9999229311943054,
+        0.9999318718910217,
+        0.9999647736549377,
+        1.0
+      ],
+      "min": [
+        -0.9999915361404419,
+        -0.9999167919158936,
+        -0.9994996190071106,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2097024,
+      "componentType": 5126,
+      "count": 27437,
+      "max": [
+        0.9903241991996765,
+        0.9899176955223083
+      ],
+      "min": [
+        0.0038127717562019825,
+        0.007688661105930805
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2316520,
+      "componentType": 5126,
+      "count": 27437,
+      "max": [
+        0.9903241991996765,
+        0.9899176955223083
+      ],
+      "min": [
+        0.0038127717562019825,
+        0.007688661105930805
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2536016,
+      "componentType": 5126,
+      "count": 27437,
+      "max": [
+        0.9903241991996765,
+        0.9899176955223083
+      ],
+      "min": [
+        0.0038127717562019825,
+        0.007688661105930805
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2755512,
+      "componentType": 5126,
+      "count": 27437,
+      "max": [
+        0.9903241991996765,
+        0.9899176955223083
+      ],
+      "min": [
+        0.0038127717562019825,
+        0.007688661105930805
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 1394268,
+      "componentType": 5125,
+      "count": 144069,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "portalRTXassets (https://sketchfab.com/portalRTXassets)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/portal-rtx-portal-cake-black-forest-f07644728d9945bf86f9f8d69e0acda7",
+      "title": "Portal RTX - Portal Cake (Black Forest)"
+    },
+    "generator": "Sketchfab-14.70.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 1970544,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2975008,
+      "byteOffset": 1970544,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2231256,
+      "byteOffset": 4945552,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1487504,
+      "byteOffset": 7176808,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 8664312,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/M_Portal_Cake_baseColor.png"
+    },
+    {
+      "uri": "textures/M_Portal_Cake_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/M_Portal_Cake_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "M_Portal_Cake",
+      "normalTexture": {
+        "index": 2,
+        "texCoord": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1,
+          "texCoord": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5,
+            "TEXCOORD_3": 6
+          },
+          "indices": 7,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TANGENT": 10,
+            "TEXCOORD_0": 11,
+            "TEXCOORD_1": 12,
+            "TEXCOORD_2": 13,
+            "TEXCOORD_3": 14
+          },
+          "indices": 15,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "root"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "GLTF_SceneRootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        0.010000004433095455,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.010000004433095455,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.010000004433095455,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "World.008_1"
+    },
+    {
+      "children": [
+        5,
+        6
+      ],
+      "name": "Cake_0"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_5"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_6"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

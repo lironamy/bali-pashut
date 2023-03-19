@@ -1,0 +1,8 @@
+Model Information:
+* title:	Chocolate Chip Cookie 3
+* source:	https://sketchfab.com/3d-models/chocolate-chip-cookie-3-8c55848bea9d4fe8bb71a6c2d59bb74e
+* author:	James West (https://sketchfab.com/Jameswest)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
