@@ -1,58 +1,121 @@
-import {
-    CLEAR_CART,
-    REMOVE,
-    INCREASE,
-    DECREASE,
-    DISPLAY_ITEMS,
-    ADD_TO_CART,
-  } from './actions';
+// import {
+//     CLEAR_CART,
+//     REMOVE,
+//     INCREASE,
+//     DECREASE,
+//     DISPLAY_ITEMS,
+//     ADD_TO_CART,
+//   } from './actions';
+
+import data from '../../constants/data';
+
+
+
   const reducer = (state, action) => {
-    if (action.type === CLEAR_CART) {
-      return { ...state, cart: new Map() };
+
+    
+    if(!localStorage.getItem('cart')) {
+      localStorage.setItem('cart', '[]');
     }
-    if (action.type === REMOVE) {
-      const newCart = new Map(state.cart);
-      newCart.delete(action.payload.id);
-      return { ...state, cart: newCart };
+
+    let newCart = JSON.parse(localStorage.getItem('cart'));
+
+    const itemId = action.payload.id;
+    const item = data.cocktails.find((cocktail) => cocktail.id === itemId);
+
+    if (action.type === "CLEAR_CART") {
+
+      localStorage.clear();
+
+      return 0;
     }
-    if (action.type === INCREASE) {
-      const itemId = action.payload.id;
-      const newCart = new Map(state.cart);
-      const item = newCart.get(itemId);
-      const newItem = { ...item, amount: item.amount + 1 };
-      newCart.set(itemId, newItem);
-      return { ...state, cart: newCart };
+
+    if (action.type === "REMOVE") {
+      
+      newCart = newCart.filter((item) => {
+        if(item.id !== itemId) {
+          return item;
+        }
+      });
+
+      localStorage.setItem('cart', JSON.stringify(newCart));
+
+      return 0;
     }
-    if (action.type === DECREASE) {
-      const itemId = action.payload.id;
-      const newCart = new Map(state.cart);
-      const item = newCart.get(itemId);
-      if (item.amount === 1) {
-        newCart.delete(itemId);
-        return { ...state, cart: newCart };
+
+    if (action.type === "INCREASE") {
+      newCart = newCart.filter((item) => {
+        if(item.id !== itemId) {
+          return item;
+        }
+        else {
+          item.amount = item.amount + 1;
+          return item;
+        }
+      });
+
+      localStorage.setItem('cart', JSON.stringify(newCart));
+      
+      return 0;
+    }
+
+    if (action.type === "DECREASE") {
+      newCart = newCart.filter((item) => {
+        if(item.id !== itemId) {
+          return item;
+        }
+        else {
+          item.amount = item.amount - 1;
+
+          if(item.amount === 0) {
+            return null;
+          }
+
+          return item;
+        }
+      });
+
+      localStorage.setItem('cart', JSON.stringify(newCart));
+      
+      return 0;
+    }
+
+    if (action.type === "ADD_TO_CART") {
+  
+      let b = true;
+
+      for(let product of newCart) {
+        if(product.id === itemId) {
+
+          let newAmount = product.amount + 1;
+          let itemToUpdate; 
+   
+          newCart = newCart.filter((item) => {
+            if(item.id !== itemId) {
+              return item;
+            }
+            else {
+              itemToUpdate = item;
+            }
+          });
+
+          newCart.push({ ...itemToUpdate, amount: newAmount });
+
+          b = false;
+        }
       }
-      const newItem = { ...item, amount: item.amount - 1 };
-      newCart.set(itemId, newItem);
-      return { ...state, cart: newCart };
-    }
-    if (action.type === DISPLAY_ITEMS) {
-      const newCart = new Map(action.payload.cart.data.cocktails.map((item) => [item.id, item]));
-      return { ...state, loading: false, cart: newCart };
-    }
-    if (action.type === ADD_TO_CART) {
-      const itemId = action.payload.id;
-      const newCart = new Map(state.cart);
-      const item = data.cocktails.find((cocktail) => cocktail.id === itemId);
-      if (!newCart.has(itemId)) {
-        newCart.set(itemId, { ...item, amount: 1 });
-      } else {
-        const existingItem = newCart.get(itemId);
-        newCart.set(itemId, { ...existingItem, amount: existingItem.amount + 1 });
-      }
-      return { ...state, cart: newCart };
+
+      if (b === true) {
+        newCart.push({ ...item, amount: 1 });
+      } 
+
+      localStorage.setItem('cart', JSON.stringify(newCart));
+
+      return 0;
     }
     
   
+
     throw new Error('no matching action type');
   };
   

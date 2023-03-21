@@ -1,10 +1,18 @@
 import React from 'react';
 import { data } from '../../constants';
-import { ADD_TO_CART } from '../Cart/actions';
+import  reducer  from '../Cart/reducer';
+
 
 const MenuItem = () => {
+
+  function addToCart(idOfProduct) {
+    reducer('none', { type: 'ADD_TO_CART', payload: { id: idOfProduct } });
+  }
+
   return data.cocktails.map(cocktail => {
+
     const { id, imgUrl, title, subtitle, subtitleB, price } = cocktail;
+
     return (
       <div className="menu-item-card" key={id}>
         <div className="menu-item-card-img-container">
@@ -16,7 +24,7 @@ const MenuItem = () => {
             <p className="menu-item-card-titleS">{subtitle}</p>
             <p className="menu-item-card-titleB">{subtitleB}</p>
             <p className="menu-item-card-price">₪{price}</p>
-            <button className="menu-item-card-button" onClick={() => ({ type: ADD_TO_CART, payload: { item: cocktail } })}>הוספה לסל</button>
+            <button className="menu-item-card-button" onClick={() => { addToCart(id) }}>הוספה לסל</button>
           </div>
         </div>
       </div>
