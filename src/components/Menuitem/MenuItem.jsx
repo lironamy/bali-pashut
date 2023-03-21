@@ -1,30 +1,28 @@
 import React from 'react';
+import { data } from '../../constants';
+import { ADD_TO_CART } from '../Cart/actions';
 
-
-const MenuItem = ({ title, price, tags, imgUrl }) => (
-  <div className="app__menuitem">
-    <div className="app__menuitem-head">
-      {imgUrl && (
-        <div className="app__menuitem-img">
-          
-          <img src={imgUrl} alt="menu__img" />
-         
+const MenuItem = () => {
+  return data.cocktails.map(cocktail => {
+    const { id, imgUrl, title, subtitle, subtitleB, price } = cocktail;
+    return (
+      <div className="menu-item-card" key={id}>
+        <div className="menu-item-card-img-container">
+          <img src={imgUrl} alt="cocktail" className="menu-item-card-img" />
         </div>
-      )}
-      <div className="app__menuitem-price">
-        <p className="p__cormorant">{price}</p>
+        <div className="menu-item-card-content">
+          <div className="menu-item-card-text-container">
+            <p className="menu-item-card-title">{title}</p>
+            <p className="menu-item-card-titleS">{subtitle}</p>
+            <p className="menu-item-card-titleB">{subtitleB}</p>
+            <p className="menu-item-card-price">₪{price}</p>
+            <button className="menu-item-card-button" onClick={() => ({ type: ADD_TO_CART, payload: { item: cocktail } })}>הוספה לסל</button>
+          </div>
+        </div>
       </div>
-      <div className="app__menuitem-dash" />
-
-      <div className="app__menuitem-name">
-        <p className="p__cormorant" style={{ color: '#DCCA87' }}>{title}</p>
-      </div>
-    </div>
-
-    <div className="app__menuitem-sub">
-      <p className="p__opensans" style={{ color: '#AAAAAA' }}>{tags}</p>
-    </div>
-  </div>
-);
+    );
+  });
+}
 
 export default MenuItem;
+

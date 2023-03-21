@@ -3,6 +3,7 @@ import {GiHamburgerMenu} from 'react-icons/gi';
 import {GiShoppingCart} from 'react-icons/gi';
 import {MdOutlineCookie} from 'react-icons/md';
 import images from '../../constants/images';
+import CartContainer from '../Cart/CartContainer';
 
 
 
@@ -34,8 +35,8 @@ const Navbar = () => {
         {toggleCart && (
           <div className="app__cart-smallscreen_overlay slide-left">
             <MdOutlineCookie color='#fff' fontSize={27} className="overlay__close" onClick={handleClick} />
-          </div>
-        )}
+            <CartContainer />
+          </div>)}
       </div>
 
       <ul className='app__navbar-links'>

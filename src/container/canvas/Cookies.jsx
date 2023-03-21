@@ -13,8 +13,8 @@ const Cookies = ({ isMobile }) => {
       <spotLight />
       <primitive
         object={Cookie.scene}
-        scale={isMobile ? 400 : 500}
-        position={isMobile ? [0, 0,-10] : [0, 0,-20]}
+        scale={isMobile ? 350 : 500}
+        position={isMobile ? [0, 0,-13] : [0, 0,-20]}
         rotation={isMobile ? [0, 0,0] : [0, 0,0]}
       />
     </mesh>
