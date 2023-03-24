@@ -3,14 +3,15 @@ import  CartItem from './CartItem';
 import { useGlobalContext } from './context';
 import { MdOutlineCookie } from 'react-icons/md';
 import reducer from './reducer';
-
+import Paypal from '../Paypal/paypal';
 
 
 
 const CartContainer = () => {
-  const { cart, totalCost, setCart } = useGlobalContext();
-  const cartArray = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  const { totalCost } = useGlobalContext();
+  let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
   const [toggleCart, setToggleCart] = useState(false);
+
 
   const handleAddToCart = (id) => {
     setCart(prevCart => {
@@ -26,8 +27,15 @@ const CartContainer = () => {
 
   function clearCart(idOfProduct) {
     reducer('none', { type: "CLEAR_CART", payload: { id: idOfProduct } });
-    
+
+    document.getElementById('cart-content').remove();
+    document.getElementById('cart-footer').remove();
+
+    let html = `<h4 className='empty-cart'>כרגע ריק</h4>`;
+
+    document.getElementById('empty-cart').innerHTML = html;
   }
+
   function fetchData(cart) {
     reducer('none', { type: "CLEAR_CART", payload: { cart } });
     
@@ -49,7 +57,7 @@ const CartContainer = () => {
 
   }, [toggleCart]);
 
-  if (cartArray.length === 0) {
+  if (cart.length === 0) {
     return (
       <section className='cart'>
         <header>
@@ -67,16 +75,23 @@ const CartContainer = () => {
         {toggleCart && (
         <MdOutlineCookie color='#fff' fontSize={27} className="overlay__close" onClick={handleClick} />
         )}
+
+        <div id='empty-cart'></div>
         </header>
-        <div>{cartArray.map(item => <CartItem key={item.id} onClick={handleAddToCart} {...item} />)}</div>
-      <footer>
+
+        <div id='cart-content' >{cart.map(item => <CartItem key={item.id} onClick={handleAddToCart} {...item} />)}</div>
+
+      <footer id='cart-footer' >
         <hr />
         <div>
           <h5 className='cart-total'>
             סך הכל <span>₪{totalCost.toFixed(2)}</span>
           </h5>
         </div>
-        <button className='btn btn-hipster' onClick={() => clearCart(cartArray)}>
+
+        <Paypal />
+        
+        <button className='btn btn-hipster' onClick={() => clearCart(cart)}>
           למחוק סל
         </button>
       </footer>

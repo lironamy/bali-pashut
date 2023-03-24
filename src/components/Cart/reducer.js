@@ -1,11 +1,4 @@
-// import {
-//     CLEAR_CART,
-//     REMOVE,
-//     INCREASE,
-//     DECREASE,
-//     DISPLAY_ITEMS,
-//     ADD_TO_CART,
-//   } from './actions';
+
 
 import data from '../../constants/data';
 
