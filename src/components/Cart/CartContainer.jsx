@@ -8,7 +8,6 @@ import Paypal from '../Paypal/paypal';
 
 
 const CartContainer = () => {
-  const { totalCost } = useGlobalContext();
   let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
   const [toggleCart, setToggleCart] = useState(false);
 
@@ -24,6 +23,23 @@ const CartContainer = () => {
       return updatedCart;
     });
   };
+
+  const totalCost = (cart) => {
+    let total = 0;
+  
+    for (let i = 0; i < cart.length; i++) {
+      const item = cart[i];
+      const price = parseFloat(item.price);
+      const amount = parseFloat(item.amount);
+  
+      total += price * amount;
+    }
+    
+  
+    return total;
+  };  
+  
+
 
   function clearCart(idOfProduct) {
     reducer('none', { type: "CLEAR_CART", payload: { id: idOfProduct } });
@@ -45,17 +61,6 @@ const CartContainer = () => {
     setToggleCart(!toggleCart);
   }
 
-  useEffect(() => {
-    if (toggleCart) {
-      // Prevent scrolling when cart overlay is open
-      document.body.style.overflow = 'hidden';
-    } else {
-      // Enable scrolling when cart overlay is closed
-      document.body.style.overflow = 'auto';
-    }
-
-
-  }, [toggleCart]);
 
   if (cart.length === 0) {
     return (
@@ -85,7 +90,7 @@ const CartContainer = () => {
         <hr />
         <div>
           <h5 className='cart-total'>
-            סך הכל <span>₪{totalCost.toFixed(2)}</span>
+            סך הכל <span>₪{totalCost(cart)}</span>
           </h5>
         </div>
 

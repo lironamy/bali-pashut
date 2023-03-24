@@ -2,47 +2,64 @@
 import React, { useState, useEffect } from "react" ;
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 
+
+
 const Paypal = () => {
     const [success, setSuccess] = useState(false);
     const [ErrorMessage, setErrorMessage] = useState("");
     const [orderID, setOrderID] = useState(false);
 
     // console.log(process))
-    const CLIENT_ID = "ARXGQaFlbRd32MZ0S7pXTein_tW_-KU2X4HxzTSoxVh_Hb6LDjJczFksqgKln9Zh87zoHdW6B9SZncrQ"
+    const CLIENT_ID = "AeNnB8SfRNJn3NDB12IdZRlnmWF9f-5G2iHmdVyD_E8vRI1Krw8arly1m-lLOolmTtWGuDq-Ml9O4Wuc";
     // const APP_SECRET = process.env.APP_SECRET || "EHXgGZvWsEhCwzJw35kjWiEvmcqFZqjC57Vrptz7mkYLd--0PJCRPtT49yixFLNOpOPDwdQ8d84Uftr_"
     
     // creates a paypal order
-    const createOrder = (data, actions) => {
-      
-  
-        let currentCart = localStorage.getItem('cart');
-
-        currentCart = JSON.parse(currentCart);
-
-
-        // The function to create an order
-        var total = 0;
-
-        for (var i = 0; i < currentCart.length; i++) {
-          let item = currentCart[i];
-
-          total += parseFloat(item.price) * parseFloat(item.amount);
+    const getPurchaseUnits = (cart) => {
+      const purchaseUnits = [];
+      let total = 0;
+      let title = '';
+    
+      for (let i = 0; i < cart.length; i++) {
+        const item = cart[i];
+        const price = parseFloat(item.price);
+        const amount = parseFloat(item.amount);
+    
+        total += price * amount;
+        title += item.title;
+        if (i < cart.length - 1) {
+          title += ', ';
         }
-
-        console.log(total);
-
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              currency_code: 'USD',
-              value: total.toFixed(2)
-            }
-          }],
-        }).then((orderID) => {
-            setOrderID(orderID);
-            return orderID;
+      
+    
+        purchaseUnits.push({
+          amount: {
+            currency_code: 'ILS',
+            value: (price * amount).toFixed(2),
+          },
+          description: item.title,
+          quantity: item.amount,
+          reference_id: item.id,
         });
+      }
+      
+      return { purchaseUnits, total, title };
+      
     };
+    
+    
+    const createOrder = (data, actions) => {
+      const currentCart = JSON.parse(localStorage.getItem('cart'));
+      const { purchaseUnits, total, title } = getPurchaseUnits(currentCart);
+    
+      return actions.order.create({
+        purchase_units: purchaseUnits,
+      }).then((orderID) => {
+        setOrderID(orderID);
+        return orderID;
+      });
+    };
+    
+    
 
     // check Approval
     const onApprove = (data, actions) => {
@@ -65,7 +82,7 @@ const Paypal = () => {
     },[success]);
 
     return (
-        <PayPalScriptProvider options={{ "client-id": CLIENT_ID }}>
+        <PayPalScriptProvider options={{ "client-id": CLIENT_ID, currency: "ILS" }}>
             <div>
               <PayPalButtons
                 style={{ layout: "vertical" }}

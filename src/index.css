@@ -569,11 +569,20 @@ body{
   background: rgb(215, 173, 105);
   padding: 1rem 2rem;
 }
+.app__navbar-links-logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+}
+
 
 .app__navbar-logo {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin: 0 1rem;
 }
 
 .app__navbar-logo img {
@@ -1504,6 +1513,16 @@ font-weight: bold;
 }
   
 /* cart css */
+.cart {
+  word-wrap: break-word;
+  overflow: scroll;
+  
+
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 .cart-item {
   display: grid;
@@ -1562,3 +1581,4 @@ font-weight: bold;
   display: block;
 }
 
+/* add to cart button */

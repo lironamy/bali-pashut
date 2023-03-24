@@ -27,6 +27,7 @@ const Navbar = () => {
 
   return (
     <nav className='app__navbar'>
+      <div className='app__navbar-links-logo' >
       <div className='app__navbar-logo'>
         <img src={images.gericht} alt='app-logo' />
       </div>
@@ -38,12 +39,12 @@ const Navbar = () => {
             <CartContainer />
           </div>)}
       </div>
+      </div>
 
       <ul className='app__navbar-links'>
         <li className='p__opensans p__W'><a href="#home">ראשי</a></li>
         <li className='p__opensans p__W'><a href="#about">אודות</a></li>
         <li className='p__opensans p__W'><a href="#menu">תפריט</a></li>
-        <li className='p__opensans p__W'><a href="#awards">סל קניות</a></li>
         <li className='p__opensans p__W'><a href="#contact">צור קשר</a></li>
       </ul>
       
@@ -57,7 +58,6 @@ const Navbar = () => {
               <li className='p__opensans p__W'><a href="#home" onClick={() => setToggleMenu(false)}>ראשי</a></li>
               <li className='p__opensans p__W'><a href="#about" onClick={() => setToggleMenu(false)}>אודות</a></li>
               <li className='p__opensans p__W'><a href="#menu" onClick={() => setToggleMenu(false)}>תפריט</a></li>
-              <li className='p__opensans p__W'><a href="#awards" onClick={() => setToggleMenu(false)}>סל קניות</a></li>
               <li className='p__opensans p__W'><a href="#contact" onClick={() => setToggleMenu(false)}>צור קשר</a></li>
             </ul>
         </div>

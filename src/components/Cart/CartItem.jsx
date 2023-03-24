@@ -6,22 +6,6 @@ import CartContainer from './CartContainer';
 
 const CartItem = ({ id, imgUrl, title, price, amount }) => {
   
-  
-  // useEffect(() => {
-  //   const newCart = JSON.parse(localStorage.getItem('cart'));
-  //   setCart(newCart || []);
-  // }, []);
-
-  // console.log(cart);
-// 
-  // useEffect(() => {
-  //   localStorage.setItem('cart', JSON.stringify(cart));
-  // }, [cart]);
-
-
-  // console.log(cart);
-
-
   function remove(idOfProduct) {
     reducer('none', { type: 'REMOVE', payload: { id: idOfProduct } });
 
