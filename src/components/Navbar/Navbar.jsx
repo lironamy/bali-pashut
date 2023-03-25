@@ -27,26 +27,29 @@ const Navbar = () => {
 
   return (
     <nav className='app__navbar'>
-      <div className='app__navbar-links-logo' >
+      <div className='app__navbar-links-logo' >  
+        <div>
+          <GiShoppingCart className='burger' color='#fff' fontSize={27} onClick={handleClick} />
+          {toggleCart && (
+            <div className="app__cart-smallscreen_overlay app__bgE slide-left">
+              <MdOutlineCookie color='#fff' fontSize={27} className="overlay__close" onClick={handleClick} />
+              <CartContainer />
+            </div>)}
+        </div>
+      </div>
+
       <div className='app__navbar-logo'>
         <img src={images.gericht} alt='app-logo' />
       </div>
-      <div>
-        <GiShoppingCart className='burger' color='#fff' fontSize={27} onClick={handleClick} />
-        {toggleCart && (
-          <div className="app__cart-smallscreen_overlay app__bgE slide-left">
-            <MdOutlineCookie color='#fff' fontSize={27} className="overlay__close" onClick={handleClick} />
-            <CartContainer />
-          </div>)}
+     
+      <div className='app__navbar-links-logo' >
+        <ul className='app__navbar-links'>
+          <li className='p__opensans p__W'><a href="#home">ראשי</a></li>
+          <li className='p__opensans p__W'><a href="#about">אודות</a></li>
+          <li className='p__opensans p__W'><a href="#menu">תפריט</a></li>
+          <li className='p__opensans p__W'><a href="#contact">צור קשר</a></li>
+        </ul>
       </div>
-      </div>
-
-      <ul className='app__navbar-links'>
-        <li className='p__opensans p__W'><a href="#home">ראשי</a></li>
-        <li className='p__opensans p__W'><a href="#about">אודות</a></li>
-        <li className='p__opensans p__W'><a href="#menu">תפריט</a></li>
-        <li className='p__opensans p__W'><a href="#contact">צור קשר</a></li>
-      </ul>
       
       <div className='app__navbar-smallscreen'>
         <GiHamburgerMenu className='burger' color='#fff' fontSize={27} onClick={()=>setToggleMenu(true)}/>

@@ -87,7 +87,7 @@ a {
 /*  כל מה שהיה ב App.css */
 
 body{
-  background-color: rgb(215, 173, 105);
+  background-color:  #8a3327;
 }
 
 .section__padding {
@@ -109,7 +109,7 @@ body{
 }
 
 .app__bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bg.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bg.png');
   background-position: center;
   background-size: cover;
   background-repeat: inherit;
@@ -118,14 +118,6 @@ body{
   
 }
 
-.app__bgH {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./assets/bgH.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: inherit;
-
-  
-}
 
 .app__wrapper {
   display: flex;
@@ -251,7 +243,7 @@ body{
   }
   
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
@@ -266,7 +258,7 @@ body{
     padding: 4rem;
   }
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bgM.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bgM.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -274,12 +266,7 @@ body{
     position:relative ;
     
   }
-  .app__bgH {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./assets/bgH.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: inherit;  
-  }
+  
   .app__aboutus-content_knife img {
     display: none;
   }
@@ -304,7 +291,7 @@ body{
 
   }
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bgM.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bgM.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -313,10 +300,7 @@ body{
     
   }
   .app__bgH {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./assets/bgH.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: inherit;  
+    background-color: #dcb276; 
   }
   .app__aboutus-content_knife img {
     display: none;
@@ -343,7 +327,7 @@ body{
     line-height: 70px;
   }
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bgM.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bgM.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -351,12 +335,7 @@ body{
     position:relative ;
     
   }
-  .app__bgH {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./assets/bgH.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: inherit;  
-  }
+
 
   .app__aboutus-content_knife img {
     display: none;
@@ -394,12 +373,7 @@ body{
     position:relative ;
     
   }
-  .app__bgH {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('./assets/bgH.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: inherit;  
-  }
+ 
 
   .app__aboutus-content_knife img {
     display: none;
@@ -548,16 +522,16 @@ body{
 
 .app__navbar {
   width: 100%;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(215, 173, 105);
+  background: #8a3327 ;
   padding: 1rem 2rem;
 }
 .app__navbar-links-logo {
   flex: 1;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   list-style: none;
 }
@@ -572,6 +546,7 @@ body{
 
 .app__navbar-logo img {
   width: 100px;
+  margin-top: 60%;
 }
 
 .app__navbar-links {
@@ -615,7 +590,7 @@ body{
   right: 0;
   width: 100%;
   height: 100vh;
-  background-color:rgb(189 133 166);
+  background-color:#fee7b5;
   transition: 0.5s ease;
   display: flex;
   justify-content: center;
@@ -680,11 +655,13 @@ cursor: pointer;
 
 @media screen and (max-width: 650px) {
   .app__navbar {
+      height: 50px;
       padding: 1rem;
       align-items: center;
   }
   .app__navbar-logo img {
       width: 80px;
+      margin-top: 50%;
   }
 
 }
@@ -872,7 +849,7 @@ cursor: pointer;
 
 
 .app__header {
-  background-color:rgb(189 133 166);
+  background-color: #dcb276;
   
 }
 
@@ -880,7 +857,6 @@ cursor: pointer;
   font-family: var(--font-alt);
   color: rgb(255, 255, 255);
   letter-spacing: 0.04em;
-  line-height: 117px;
   font-size: 50px;
   text-align: right;
 }
@@ -895,7 +871,7 @@ cursor: pointer;
 
 .app__specialMenu {
   flex-direction: column;
-  background-color:rgb(189 133 166);
+  background-color:#fee7b5;
   position: relative;
 }
 
@@ -1010,7 +986,7 @@ font-weight: bold;
 
 .menu-item-card-button {
   font-family: var(--font-base);
-    border-color: rgb(189 133 166);
+    border-color: #fee7b5);
     background-color: transparent;
     color: rgb(57, 55, 55) ;
     padding: 10px;
@@ -1086,9 +1062,9 @@ font-weight: bold;
 }
 
 .menu-item-card-button {
-  border-color: rgb(189 133 166);
+  border-color: #fee7b5;
   background-color: transparent;
-  color: rgb(189 133 166);
+  color: #fee7b5;
   padding: 5px;
   margin: 5px;
   font-size: 30px;
@@ -1163,9 +1139,9 @@ font-weight: bold;
 }
 
 .menu-item-card-button {
-    border-color: rgb(189 133 166);
+    border-color: #fee7b5;
     background-color: transparent;
-    color: rgb(189 133 166);
+    color: #fee7b5;
     padding: 5px;
     margin: 5px;
     font-size: 25px;
@@ -1226,12 +1202,12 @@ font-weight: bold;
   }
 
   .menu-item-card-button {
-      border-color: rgb(189 133 166);
+      border-color: #fee7b5;
       background-color: transparent;
-      color: rgb(189 133 166);
+      color: #fee7b5;
       padding: 5px;
       margin: 5px;
-      font-size: 25px;
+      font-size: 35px;
       border-radius: 50px;
       cursor: pointer;
   }
@@ -1284,9 +1260,9 @@ font-weight: bold;
   }
 
   .menu-item-card-button {
-      border-color: rgb(189 133 166);
+      border-color: #fee7b5;
       background-color: transparent;
-      color: rgb(189 133 166);
+      color: #fee7b5;
       padding: 5px;
       font-size: 20px;
       border-radius: 50px;
@@ -1564,12 +1540,24 @@ font-weight: bold;
   .cart {
   margin: 5rem;
   }
-  .menu-item-card-button {
+  .menu-item-card-buttonC {
+    border-color: #fee7b5;
+      background-color: transparent;
+      color: #fee7b5;
+      padding: 7px;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+  }  
+}
+.menu-item-card-buttonC {
+  border-color: #fee7b5;
+    background-color: transparent;
+    color: #fee7b5;
+    padding: 7px;
     font-size: 1rem;
-  }
-
-  
-  
+    border-radius: 50px;
+    cursor: pointer;
 }
   
 

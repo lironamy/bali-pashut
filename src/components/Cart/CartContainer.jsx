@@ -99,7 +99,7 @@ const CartContainer = () => {
             סך הכל <span>₪{total}</span>
           </h5>
         </div>
-        <button className='menu-item-card-button' onClick={() => clearCart(cart)}>
+        <button className='menu-item-card-buttonC' onClick={() => clearCart(cart)}>
           למחוק סל
         </button>
       </footer>
