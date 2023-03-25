@@ -40,7 +40,7 @@ const MenuItem = () => {
             <p className="menu-item-card-titleS">{subtitle}</p>
             <p className="menu-item-card-titleB">{subtitleB}</p>
             <p className="menu-item-card-price">₪{price}</p>
-            <ReactiveButton outline shadow  rounded size="large" color="primary"
+            <ReactiveButton outline rounded size="large" color="primary"
               buttonState={buttonState}
               idleText="הוספה לסל"
               loadingText="מוסיף"
