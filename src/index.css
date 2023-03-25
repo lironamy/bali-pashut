@@ -184,6 +184,9 @@ body{
   color: var(--color-white);
 
 }
+.app__bgH {
+  background-color: #dcb276; 
+}
 
 .headtext__cormorant {
   font-family: var(--font-alt);
@@ -299,9 +302,7 @@ body{
     position:relative ;
     
   }
-  .app__bgH {
-    background-color: #dcb276; 
-  }
+ 
   .app__aboutus-content_knife img {
     display: none;
   }
@@ -382,12 +383,7 @@ body{
     padding: 4rem 1rem;
   }
 }
-.app__bgE {
-  background-image: linear-gradient(rgba(189, 143, 190, 0.9), rgba(255, 255, 255, 0.9));
-  background-position: center;
-  background-size: cover;
-  background-repeat: inherit;  
-}
+
 
 /* FooterOverlay.css */
 
@@ -590,7 +586,6 @@ body{
   right: 0;
   width: 100%;
   height: 100vh;
-  background-color:#fee7b5;
   transition: 0.5s ease;
   display: flex;
   justify-content: center;
@@ -871,7 +866,7 @@ cursor: pointer;
 
 .app__specialMenu {
   flex-direction: column;
-  background-color:#fee7b5;
+  background-color: #dcb276;
   position: relative;
 }
 
@@ -986,7 +981,7 @@ font-weight: bold;
 
 .menu-item-card-button {
   font-family: var(--font-base);
-    border-color: #fee7b5);
+    border-color: #fee7b5;
     background-color: transparent;
     color: rgb(57, 55, 55) ;
     padding: 10px;
@@ -1314,7 +1309,7 @@ font-weight: bold;
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgb(135, 106, 179);
+  background: #8a3327;
   animation: animate 25s linear infinite;
   bottom: -150px;
   
@@ -1421,7 +1416,7 @@ font-weight: bold;
       list-style: none;
       width: 20px;
       height: 20px;
-      background: rgb(215, 173, 105);
+      background: #8a3327;
       animation: animate 25s linear infinite;
       bottom: -150px;
       
