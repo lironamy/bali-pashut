@@ -1,7 +1,7 @@
 // import { CLIENT_ID } from './Config'
 import React, { useState, useEffect } from "react" ;
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
-
+import confetti from 'canvas-confetti';
 
 
 const Paypal = () => {
@@ -76,7 +76,21 @@ const Paypal = () => {
 
     useEffect(() => {
         if (success) {
-            alert("Payment successful!!");
+            localStorage.removeItem('cart');
+            document.getElementById('cart-content').remove();
+            document.getElementById('cart-footer').remove();
+            document.getElementById('payPal').remove();
+            document.getElementById('hr').remove();
+
+            let html = `<h4 className='empty-cart'>הזמנה בוצעה בהצלחה</h4>`;
+
+            document.getElementById('empty-cart').innerHTML = html;
+            confetti({
+                particleCount: 200,
+                spread: 100,
+                origin: { y: 0.5 }
+            });
+            
             console.log('Order successful . Your order id is--', orderID);
         }
     },[success]);

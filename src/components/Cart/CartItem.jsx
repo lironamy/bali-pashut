@@ -68,7 +68,7 @@ const CartItem = ({ id, imgUrl, title, price, amount }) => {
         <h5>{title}</h5>
         <span className='item-price'>₪{price}</span>
         <button className='remove-btn' onClick={() => remove(id)}>
-          להסיר
+          X
         </button>
       </div>
       <div>

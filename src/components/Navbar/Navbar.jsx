@@ -34,7 +34,7 @@ const Navbar = () => {
       <div>
         <GiShoppingCart className='burger' color='#fff' fontSize={27} onClick={handleClick} />
         {toggleCart && (
-          <div className="app__cart-smallscreen_overlay slide-left">
+          <div className="app__cart-smallscreen_overlay app__bgE slide-left">
             <MdOutlineCookie color='#fff' fontSize={27} className="overlay__close" onClick={handleClick} />
             <CartContainer />
           </div>)}
