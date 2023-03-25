@@ -6,7 +6,7 @@ import {MenuItem} from '../../components';
 
 const SpecialMenu = () => (
 
-  <div className="app__specialMenu app__bgH  flex__center area section__padding" id="menu">
+  <div className="app__specialMenu app__bgE  flex__center area section__padding" id="menu">
         <div className="app__specialMenu-title">
           <SubHeading title="תפריט" />
           <h1 className="headtext__cormorant">העוגיות שלנו</h1>

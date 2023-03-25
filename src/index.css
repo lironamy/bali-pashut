@@ -187,6 +187,9 @@ body{
 .app__bgH {
   background-color: #dcb276; 
 }
+.app__bgE {
+  background-color: #dcb276; 
+}
 
 .headtext__cormorant {
   font-family: var(--font-alt);
@@ -212,6 +215,15 @@ body{
   }
   .spoon__img {
     width: 80px;
+  }
+  .app__bgH {
+    background-image:  url('./assets/bgH.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    
+    /* position:relative ; */
+    
   }
 }
 @media screen and (max-width: 2000px) {
