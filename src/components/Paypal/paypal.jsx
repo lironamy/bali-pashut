@@ -50,9 +50,13 @@ const Paypal = () => {
     const createOrder = (data, actions) => {
       const currentCart = JSON.parse(localStorage.getItem('cart'));
       const { purchaseUnits, total, title } = getPurchaseUnits(currentCart);
+
     
       return actions.order.create({
         purchase_units: purchaseUnits,
+        application_context: {
+          shipping_preference: 'NO_SHIPPING'
+        }
       }).then((orderID) => {
         setOrderID(orderID);
         return orderID;

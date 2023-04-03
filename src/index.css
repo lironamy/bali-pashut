@@ -109,7 +109,7 @@ body{
 }
 
 .app__bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bg.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/bg.png');
   background-position: center;
   background-size: cover;
   background-repeat: inherit;
@@ -258,7 +258,7 @@ body{
   }
   
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bg.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/bg.png');
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
@@ -273,7 +273,7 @@ body{
     padding: 4rem;
   }
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bgM.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/bgM.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -306,7 +306,7 @@ body{
 
   }
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bgM.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/bgM.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -340,7 +340,7 @@ body{
     line-height: 70px;
   }
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./assets/bgM.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/bgM.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -378,7 +378,7 @@ body{
     line-height: 70px;
   }
   .app__bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/bgM.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./assets/bgM.jpg');
     background-position: center;
     background-size: contain;
     background-repeat: repeat;
@@ -546,10 +546,11 @@ body{
 
 
 .app__navbar-logo {
+
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 1rem;
+  margin-left: 25px;
 }
 
 .app__navbar-logo img {
@@ -662,13 +663,13 @@ cursor: pointer;
 
 @media screen and (max-width: 650px) {
   .app__navbar {
-      height: 50px;
+      height: 100px;
       padding: 1rem;
       align-items: center;
   }
   .app__navbar-logo img {
       width: 80px;
-      margin-top: 50%;
+      margin-top: 0;
   }
 
 }
@@ -782,8 +783,8 @@ cursor: pointer;
 }
 
 .app__footer-links_logo img:first-child {
-  width: 100px;
-  margin-right: 2rem;
+  width: 80px;
+  margin: 0 1rem;
 }
 
 
@@ -1048,13 +1049,11 @@ overflow: hidden;
   font-weight: bold;
 }
 .menu-item-card-titleS {
-    height: 25px;
-    margin: 0;
     font-size: 20px;
     font-weight: bold;
 }
 .menu-item-card-titleB {
-    height: 50px;
+    height: 25px;
     margin: 0;
     font-size: 20px;
     font-weight: bold;
@@ -1119,19 +1118,16 @@ font-weight: bold;
     width: 100%;
 }
 .menu-item-card-title {
-    height: 50px;
-    margin: 0;
+    height: 25px;
     font-size: 20px;
     font-weight: bold;
 }
 .menu-item-card-titleS {
-  height: 25px;
-  margin: 0;
   font-size: 15px;
   font-weight: bold;
 }
 .menu-item-card-titleB {
-  height: 50px;
+  height: 25px;
   margin: 0;
   font-size: 15px;
   font-weight: bold;
@@ -1196,8 +1192,7 @@ font-weight: bold;
       width: 100%;
   }
   .menu-item-card-title {
-      height: 50px;
-      margin: 0;
+      height: 25px;
       font-size: 15px;
       font-weight: bold;
   }
@@ -1259,8 +1254,7 @@ font-weight: bold;
       width: 100%;
   }
   .menu-item-card-title {
-      height: 50px;
-      margin: 0;
+      height: 25px;
       font-size: 15px;
       font-weight: bold;
   }
@@ -1564,6 +1558,18 @@ font-weight: bold;
     font-size: 1rem;
     border-radius: 50px;
     cursor: pointer;
+}
+
+#shipToBillingAddress{
+  display: none !important;
+
+}
+.e1w1a1oi0{
+  display: none !important;
+}
+
+.css-1jg1e0d-Container {
+  display: none !important;
 }
   
 

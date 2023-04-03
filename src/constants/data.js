@@ -4,7 +4,7 @@ const cocktails = [
   {
     id: 1,
     imgUrl: images.cocktail01,
-    title: 'עוגיות מושלגות וניל לימוני',
+    title: 'עוגיות מושלגות וניל',
     price: 60,
     subtitle: 'מארז 14 עוגיות',
     subtitleB: `'כ-400 גר`,

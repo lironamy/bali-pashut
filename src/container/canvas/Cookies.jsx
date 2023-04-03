@@ -52,6 +52,7 @@ const CookiesCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [0, 35, 0], fov: 50 }}
       gl={{ preserveDrawingBuffer: true }}
+      style={{ width: '45vw', height: '35vh' }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
