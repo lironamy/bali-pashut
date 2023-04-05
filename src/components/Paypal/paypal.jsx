@@ -1,4 +1,3 @@
-import { CLIENT_ID } from './Config'
 import React, { useState, useEffect } from "react" ;
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import confetti from 'canvas-confetti';
@@ -8,8 +7,8 @@ const Paypal = () => {
     const [success, setSuccess] = useState(false);
     const [ErrorMessage, setErrorMessage] = useState("");
     const [orderID, setOrderID] = useState(false);
+    const CLIENT_ID = process.env.CLIENT_ID || "ARXGQaFlbRd32MZ0S7pXTein_tW_-KU2X4HxzTSoxVh_Hb6LDjJczFksqgKln9Zh87zoHdW6B9SZncrQ"
     
-    // creates a paypal order
     const getPurchaseUnits = (cart) => {
       const purchaseUnits = [];
       let total = 0;
@@ -59,9 +58,6 @@ const Paypal = () => {
       });
     };
     
-    
-
-    // check Approval
     const onApprove = (data, actions) => {
         return actions.order.capture().then(function (details) {
             const { payer } = details;
@@ -69,7 +65,6 @@ const Paypal = () => {
         });
     };
 
-    //capture likely error
     const onError = (data, actions) => {
         setErrorMessage("An Error occured with your payment");
     };
