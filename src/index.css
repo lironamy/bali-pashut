@@ -86,6 +86,10 @@ a {
 
 /*  כל מה שהיה ב App.css */
 
+.M__B {
+  margin: 20px;
+}
+
 body{
   background-color:  #8a3327;
 }

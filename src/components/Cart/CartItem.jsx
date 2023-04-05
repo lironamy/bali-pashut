@@ -5,18 +5,17 @@ import { getTotals } from './utils';
 import CartContainer from './CartContainer';
 
 const CartItem = ({ id, imgUrl, title, price, amount }) => {
+
+  let cart = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+  console.log(cart);
+  
   
   function remove(idOfProduct) {
     reducer('none', { type: 'REMOVE', payload: { id: idOfProduct } });
 
-    document.getElementById('cart-item-' + idOfProduct).remove();
-  }
-
-  function increase(idOfProduct) {
-    reducer('none', { type: 'INCREASE', payload: { id: idOfProduct } });
-
-    let currentAmount;
+    let currentAmount = 0;
     let currentCart = JSON.parse(localStorage.getItem('cart'));
+    let total = document.getElementById('total');
 
     currentCart.forEach(item => {
       if(item.id === idOfProduct) {
@@ -24,8 +23,44 @@ const CartItem = ({ id, imgUrl, title, price, amount }) => {
       }
     });
 
+    if(localStorage.getItem('cart') === '[]') {
+      document.getElementById('cart-content').remove();
+      document.getElementById('cart-footer').remove();
+      document.getElementById('payPal').remove();
+      document.getElementById('hr').remove();
+      document.getElementById('M__B').remove();
+
+      let html = `<h4 className='empty-cart'>כרגע ריק</h4>`;
+
+      document.getElementById('empty-cart').innerHTML = html;
+    }
+
+
+
+    document.getElementById('cart-item-' + idOfProduct).remove();
+    total.innerHTML = getTotals(currentCart).totalCost;
+  }
+
+  function increase(idOfProduct) {
+    reducer('none', { type: 'INCREASE', payload: { id: idOfProduct } });
+  
+    let currentAmount;
+    let currentCart = JSON.parse(localStorage.getItem('cart'));
+    let total = document.getElementById('total');
+  
+    currentCart.forEach(item => {
+      if(item.id === idOfProduct) {
+        currentAmount = item.amount;
+      }
+    });
+  
+    total.innerHTML = getTotals(currentCart).totalCost;
+  
     document.getElementById('amount-' + idOfProduct).innerHTML = currentAmount;
   }
+  
+  
+  
 
   function decrease(idOfProduct) {
     reducer('none', { type: 'DECREASE', payload: { id: idOfProduct } });
@@ -33,13 +68,14 @@ const CartItem = ({ id, imgUrl, title, price, amount }) => {
 
     let currentAmount = 0;
     let currentCart = JSON.parse(localStorage.getItem('cart'));
+    let total = document.getElementById('total');
+
 
     currentCart.forEach(item => {
       if(item.id === idOfProduct) {
         currentAmount = item.amount;
       }
     });
-
 
     if(currentAmount === 0) {
       remove(idOfProduct);
@@ -48,9 +84,15 @@ const CartItem = ({ id, imgUrl, title, price, amount }) => {
       document.getElementById('amount-' + idOfProduct).innerHTML = currentAmount;
     }
 
+    total.innerHTML = getTotals(currentCart).totalCost;
+
+
     if(localStorage.getItem('cart') === '[]') {
       document.getElementById('cart-content').remove();
       document.getElementById('cart-footer').remove();
+      document.getElementById('payPal').remove();
+      document.getElementById('hr').remove();
+      document.getElementById('M__B').remove();
 
       let html = `<h4 className='empty-cart'>כרגע ריק</h4>`;
 
@@ -72,11 +114,12 @@ const CartItem = ({ id, imgUrl, title, price, amount }) => {
         </button>
       </div>
       <div>
-        <button className='amount-btn' onClick={() => increase(id)}>
+        <button id='amount-btn-more' className='amount-btn'
+         onClick={() => increase(id)}>
           <FaChevronUp className='amount-icon' />
         </button>
         <span id={`amount-${id}`} className='amount'>{amount}</span>
-        <button className='amount-btn' onClick={() => decrease(id)}>
+        <button id='amount-btn-less' className='amount-btn' onClick={() => decrease(id)}>
           <FaChevronDown className='amount-icon' />
         </button>
       </div>

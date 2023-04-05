@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import CartItem from './CartItem';
-import { useGlobalContext } from './context';
 import { MdOutlineCookie } from 'react-icons/md';
 import reducer from './reducer';
 import Paypal from '../Paypal/paypal';
@@ -44,6 +43,7 @@ const CartContainer = () => {
     document.getElementById('cart-footer').remove();
     document.getElementById('payPal').remove();
     document.getElementById('hr').remove();
+    document.getElementById('M__B').remove();
 
     let html = `<h4 className='empty-cart'>כרגע ריק</h4>`;
 
@@ -96,13 +96,16 @@ const CartContainer = () => {
         
         <div>
           <h5 className='cart-total'>
-            סך הכל <span>₪{total}</span>
+          ₪ סך הכל <span id='total'>{total}</span>
           </h5>
         </div>
         <button className='menu-item-card-buttonC' onClick={() => clearCart(cart)}>
           למחוק סל
         </button>
       </footer>
+      <div className='flex__center M__B' id='M__B' >
+          איסוף עצמי בלבד
+        </div>
       <div className='payPal' id='payPal'>
         <Paypal />
       </div>

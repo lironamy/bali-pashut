@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { data } from '../../constants';
 import reducer from '../Cart/reducer';
 import ReactiveButton from 'reactive-button';
+import { MdOutlineCookie } from 'react-icons/md';
+
 
 const MenuItem = () => {
   const [loadingState, setLoadingState] = useState({});
@@ -18,7 +20,7 @@ const MenuItem = () => {
         ...prevState,
         [id]: 'success'
       }));
-    }, 2000);
+    }, 1000);
   };
 
   function addToCart(idOfProduct) {
@@ -40,11 +42,11 @@ const MenuItem = () => {
             <p className="menu-item-card-titleS">{subtitle}</p>
             <p className="menu-item-card-titleB">{subtitleB}</p>
             <p className="menu-item-card-price">₪{price}</p>
-            <ReactiveButton outline rounded size="large" color="primary"
+            <ReactiveButton outline shadow rounded  size="large" color="primary"
               buttonState={buttonState}
               idleText="הוספה לסל"
               loadingText="מוסיף"
-              successText="✔"
+              successText={ <MdOutlineCookie />  }
               onClick={() => {
                 onClickHandler(id);
                 addToCart(id);
