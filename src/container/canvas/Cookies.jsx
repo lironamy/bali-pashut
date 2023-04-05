@@ -13,8 +13,8 @@ const Cookies = ({ isMobile }) => {
       <spotLight />
       <primitive
         object={Cookie.scene}
-        scale={isMobile ? 350 : 500}
-        position={isMobile ? [0, 0,-13] : [0, 0,-20]}
+        scale={isMobile ? 450 : 500}
+        position={isMobile ? [0, 0,-17] : [0, 0,-20]}
         rotation={isMobile ? [0, 0,0] : [0, 0,0]}
       />
     </mesh>
@@ -52,7 +52,7 @@ const CookiesCanvas = () => {
       dpr={[1, 2]}
       camera={{ position: [0, 35, 0], fov: 50 }}
       gl={{ preserveDrawingBuffer: true }}
-      style={{ width: '45vw', height: '35vh' }}
+      style={{ width: '60vw', height: '35vh' }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
