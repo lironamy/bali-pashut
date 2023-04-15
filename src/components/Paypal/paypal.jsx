@@ -3,12 +3,14 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import confetti from 'canvas-confetti';
 
 
+
 const Paypal = () => {
     const [success, setSuccess] = useState(false);
     const [ErrorMessage, setErrorMessage] = useState("");
     const [orderID, setOrderID] = useState(false);
-    const CLIENT_ID = process.env.CLIENT_ID || "ARXGQaFlbRd32MZ0S7pXTein_tW_-KU2X4HxzTSoxVh_Hb6LDjJczFksqgKln9Zh87zoHdW6B9SZncrQ"
-    
+    const CLIENT_ID ="ARXGQaFlbRd32MZ0S7pXTein_tW_-KU2X4HxzTSoxVh_Hb6LDjJczFksqgKln9Zh87zoHdW6B9SZncrQ"
+
+
     const getPurchaseUnits = (cart) => {
       const purchaseUnits = [];
       let total = 0;

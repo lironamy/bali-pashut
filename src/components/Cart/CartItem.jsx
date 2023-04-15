@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { FaChevronUp, FaChevronDown } from 'react-icons/fa';
 import reducer from './reducer';
 import { getTotals } from './utils';
-import CartContainer from './CartContainer';
 
 const CartItem = ({ id, imgUrl, title, price, amount }) => {
 
