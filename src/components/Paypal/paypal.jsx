@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react" ;
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import confetti from 'canvas-confetti';
+import { CLIENT_ID } from './Config';
 
 
 
@@ -8,7 +9,6 @@ const Paypal = () => {
     const [success, setSuccess] = useState(false);
     const [ErrorMessage, setErrorMessage] = useState("");
     const [orderID, setOrderID] = useState(false);
-    const CLIENT_ID ="ARXGQaFlbRd32MZ0S7pXTein_tW_-KU2X4HxzTSoxVh_Hb6LDjJczFksqgKln9Zh87zoHdW6B9SZncrQ"
 
 
     const getPurchaseUnits = (cart) => {
@@ -83,8 +83,8 @@ const Paypal = () => {
 
             document.getElementById('empty-cart').innerHTML = html;
             confetti({
-                particleCount: 200,
-                spread: 100,
+                particleCount: 300,
+                spread: 150,
                 origin: { y: 0.5 }
             });
             

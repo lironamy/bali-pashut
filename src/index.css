@@ -534,7 +534,7 @@ body{
 
 .app__navbar {
   position: fixed;
-  z-index: 999999;
+  z-index: 20;
   width: 100%;
   height: 70px;
   display: flex;
