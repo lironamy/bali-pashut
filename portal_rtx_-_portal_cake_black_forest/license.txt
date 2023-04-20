@@ -1,0 +1,11 @@
+Model Information:
+* title:	Portal RTX - Portal Cake (Black Forest)
+* source:	https://sketchfab.com/3d-models/portal-rtx-portal-cake-black-forest-f07644728d9945bf86f9f8d69e0acda7
+* author:	portalRTXassets (https://sketchfab.com/portalRTXassets)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Portal RTX - Portal Cake (Black Forest)" (https://sketchfab.com/3d-models/portal-rtx-portal-cake-black-forest-f07644728d9945bf86f9f8d69e0acda7) by portalRTXassets (https://sketchfab.com/portalRTXassets) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
